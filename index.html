@@ -20,7 +20,7 @@
             <h1 class="display-4">Trivia game</h1>
             <div id="jumbotronBox" >
                 <button class="btn btn-primary btn-lg" id="instructionsButton" data-toggle="modal" data-target="#instructionsModal"> Instructions</button>
-                <!-- Instructions are a bootstrap modal will link to the instruction button  -->
+                <!-- Instructions are a bootstrap modal   -->
                 <div class="modal fade" id="instructionsModal" tabindex="-1"  >
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -62,9 +62,11 @@
         </div>
         <div id="answerScreen" class="text-center" style="display:none;">
             <div class="container text-left">
+                <p id="answerBanner">Your answer was</p>
                 <p id="resultQuestion">Question was</p>
                 <p id="result"> Your answer was </p>
                 <p id="resultAnswer"> Correct answer is</p>
+                <p id="next">Wait for next question</p>
             </div>
         </div>
         <div id="summaryScreen"  style="display:none;">

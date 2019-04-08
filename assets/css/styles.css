@@ -1,6 +1,28 @@
 /* Style file for Trivia game */
 
-.jumbotron-fluid {
-    
 
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+}
+
+#myJumbotron {
+    padding: 10px 0 10px 0;
+}
+
+#jumbotronBox {
+    background: lightgray;
+    text-align:center;
+}
+
+#answerScreen {
+    background: lightgray;
+}
+
+#gameScreen {
+    background: lightgray;
+}
+
+#summaryScreen{
+    background: lightgray;
 }
