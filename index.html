@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+     <!-- Jumbotron used to give good title for game  -->
+    <div class="jumbotron jumbotron-fluid " id="myJumbotron">
+        <div class="container-fluid text-center">
+            <h1 class="display-4">Trivia game</h1>
+            <div id="jumbotronBox" >
+                <button class="btn btn-primary btn-lg" id="instructionsButton" data-toggle="modal" data-target="#instructionsModal"> Instructions</button>
+                <!-- Instructions are a bootstrap modal will link to the instruction button  -->
+                <div class="modal fade" id="instructionsModal" tabindex="-1"  >
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Instructions for Trivia</h5>
+                                <button type="button" class="close" id="closeInstructions1" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Instructions for Trivia game</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="closeInstructions2" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="lead mr-4" id="swTitle">A game of questions and answers</p>
+            </div>
+
+        </div>
+    </div> 
+    
+    <!-- Main screen -->
+    <div class="container-fluid text-center ">
+        <div id="startScreen">
+            <button id="startButton" class="startButtonClass btn btn-primary btn-lg">Start Game</button>
+        </div>
+        <div id="gameScreen" class="text-center" style="display:none;">
+            <div  class="container text-left">
+                <h5>Questions</h5>
+                <p id="question">Question text</p>
+                <button id="a0" class="answerButton">First answer</button><br>
+                <button id="a1" class="answerButton">Second answer</button><br>
+                <button id="a2" class="answerButton">Third answer</button><br>
+                <button id="a3" class="answerButton">Fourth answer</button><br> 
+            </div>
+        </div>
+        <div id="answerScreen" class="text-center" style="display:none;">
+            <div class="container text-left">
+                <p id="resultQuestion">Question was</p>
+                <p id="result"> Your answer was </p>
+                <p id="resultAnswer"> Correct answer is</p>
+            </div>
+        </div>
+        <div id="summaryScreen"  style="display:none;">
+            Summary information
+            <button id="startAgainButton" class="startButtonClass btn btn-primary btn-lg">Play again</button>
+        </div>
+    </div>
+
+</body>
+<script src ="assets/javascript/app.js"></script>
+</html>
