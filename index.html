@@ -58,6 +58,11 @@
                 <button id="a1" class="answerButton">Second answer</button><br>
                 <button id="a2" class="answerButton">Third answer</button><br>
                 <button id="a3" class="answerButton">Fourth answer</button><br> 
+                <h5>Time remaining</h5>
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+                <br>
             </div>
         </div>
         <div id="answerScreen" class="text-center" style="display:none;">
@@ -70,7 +75,17 @@
             </div>
         </div>
         <div id="summaryScreen"  style="display:none;">
-            Summary information
+            <h5>Summary information </h5>
+            <h5>All games</h5>
+            <p id="summaryGames">Games played</p>
+            <p id="summaryGamesWon">Games won</p>
+            <p id="summaryGamesLost">Games Lost</p>
+            <br>
+            <h5>Last game</h5>
+            <p id="summaryQuestions">No of questions asked</p>
+            <p id="summaryRight"> No of answers correct</p>
+            <p id="summaryWrong">No of answers incorrect</p>
+            <br>
             <button id="startAgainButton" class="startButtonClass btn btn-primary btn-lg">Play again</button>
         </div>
     </div>
