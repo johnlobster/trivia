@@ -7,22 +7,28 @@ body {
 }
 
 #myJumbotron {
-    padding: 10px 0 10px 0;
+    padding: 10px 0 10px 0; /* reduces size of jumbotron */
 }
+
 
 #jumbotronBox {
     background: lightgray;
     text-align:center;
 }
 
-#answerScreen {
-    background: lightgray;
+.screenStyle {
+    background:lightblue;
+    border: 5px;
+    border-color: darkblue;
+    border-style:solid;
+    border-radius:10px;
 }
 
-#gameScreen {
-    background: lightgray;
+.answerButton {
+    background: lightblue;
 }
 
-#summaryScreen{
-    background: lightgray;
+.answerButton:hover {
+    background: darkblue;
+    color: white;
 }

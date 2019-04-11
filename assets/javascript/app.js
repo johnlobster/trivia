@@ -54,10 +54,9 @@ function updateCard ( cardData) {
 
 // update the progress bar timing the question
 function updateProgressBar(){
-    progressBarTimer += 5;
+    progressBarTimer += 5; // percentage
     
     var progressString = String(progressBarTimer) + "%";
-    console.log("Timer " + progressBarTimer + " " + progressString);
     $("#progressBar").css( "width", progressString);
     if (progressBarTimer === 100) {
         //stop timer
@@ -67,7 +66,7 @@ function updateProgressBar(){
 }
 
 function nextQuestion () {
-    console.log("show next question card " + cardNumber);
+    // console.log("show next question card " + cardNumber);
     answerSelected = "";
     updateCard( questionCards[cardNumber]);
     $("#startScreen").hide();
@@ -98,7 +97,8 @@ function summaryScreen() {
     // update summary screen
     $("#summaryGames").text("Games played: " + gamesPlayed);
     $("#summaryGamesWon").text("Games won : " + gamesWon);
-    $("#summaryGamesLost").text("Games Lost : " + gamesLost);
+    $("#summaryGamesLost").text("Games Lost : " + gamesLost)
+    ;
     $("#summaryQuestions").text("No of questions asked : " + questionCards.length);
     $("#summaryRight").text("No of answers correct : " + questionsRight);
     $("#summaryWrong").text("No of answers wrong : " + questionsWrong);
@@ -109,7 +109,7 @@ function summaryScreen() {
     $("#summaryScreen").show();
 }
 function resultScreen (){
-    console.log("show result screen");
+    // console.log("show result screen");
     // update results in answer screen
     // stop timers
     clearInterval( localInterval);
@@ -124,19 +124,19 @@ function resultScreen (){
     $("#resultAnswer").text("Correct answer was: " + questionCards[cardNumber][c]);
     if ( answerSelected === "") {
         // timed out
-        console.log("timed out");
+        // console.log("timed out");
         $("#answerBanner").text("You waited too long");
         questionsWrong ++;
     }
     else if ( answerSelected === questionCards[cardNumber].correctAnswer ){
         // correct answer
-        console.log( "correct");
+        // console.log( "correct");
         $("#answerBanner").text("Your answer was correct !");
         questionsRight ++;
     }
     else {
         // wrong answer
-        console.log("incorrect");
+        // console.log("incorrect");
         $("#answerBanner").text("Your answer was wrong");
         questionsWrong ++;
     }
@@ -147,7 +147,7 @@ function resultScreen (){
     cardNumber++;
     if( cardNumber === questionCards.length) {
         // seen all the questions so finish
-        console.log("All questions answered");
+        // console.log("All questions answered");
         clearTimeout( localTimeout);
         localTimeout = setTimeout( summaryScreen, 3000);
     }
@@ -162,7 +162,7 @@ function resultScreen (){
 // set up events on answer buttons
 $(".answerButton").on("click", function() {
     answerSelected = this.id;
-    console.log("pressed button " + answerSelected);
+    // console.log("pressed button " + answerSelected);
     // Stop counting time when user selects an answer
     clearTimeout( localTimeout);
     resultScreen();
@@ -171,7 +171,7 @@ $(".answerButton").on("click", function() {
 
 $(".startButtonClass").on("click", function() {
     
-    console.log("started game");
+    // console.log("started game");
     // reset some variables
     cardNumber = 0;
     answerSelected = "";
@@ -179,8 +179,7 @@ $(".startButtonClass").on("click", function() {
     questionsWrong = 0;
     updateCard( questionCards[cardNumber]);
     $("#startScreen").hide();
-    $("#summaryScreen").hide
-    ();
+    $("#summaryScreen").hide();
     $("#gameScreen").show();
 
     localTimeout = setTimeout( function(){
@@ -189,7 +188,7 @@ $(".startButtonClass").on("click", function() {
 
     // set up timer to update status bar
     progressBarTimer = 0;
-    localInterval = setInterval( updateProgressBar, 250);
+    localInterval = setInterval( updateProgressBar, 250); // update every 0.25 seconds
     
 });
 });

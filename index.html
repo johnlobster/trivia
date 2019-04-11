@@ -30,8 +30,9 @@
                                 <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
-                                <h5>Instructions for Trivia game</h5>
+                            <div class="modal-body text-left">
+                                <p> In this game you have to give the answers to questions. Click on the answer to answer the question. Each question must be answered within 5 seconds or you lose</p>
+                                <p> To win, you have to answer each question correctly</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" id="closeInstructions2" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -47,46 +48,50 @@
     
     <!-- Main screen -->
     <div class="container-fluid text-center ">
-        <div id="startScreen">
-            <button id="startButton" class="startButtonClass btn btn-primary btn-lg">Start Game</button>
-        </div>
-        <div id="gameScreen" class="text-center" style="display:none;">
-            <div  class="container text-left">
-                <h5>Questions</h5>
-                <p id="question">Question text</p>
-                <button id="a0" class="answerButton">First answer</button><br>
-                <button id="a1" class="answerButton">Second answer</button><br>
-                <button id="a2" class="answerButton">Third answer</button><br>
-                <button id="a3" class="answerButton">Fourth answer</button><br> 
-                <h5>Time remaining</h5>
-                <div class="progress">
-                    <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div id="startScreen">
+                    <button id="startButton" class="startButtonClass btn btn-primary btn-lg">Start Game</button>
                 </div>
-                <br>
+                <div id="gameScreen" class="text-center screenStyle" style="display:none;">
+                    <div  class="container text-left">
+                        <h5>Questions</h5>
+                        <p id="question">Question text</p>
+                        <button id="a0" class="answerButton">First answer</button><br>
+                        <button id="a1" class="answerButton">Second answer</button><br>
+                        <button id="a2" class="answerButton">Third answer</button><br>
+                        <button id="a3" class="answerButton">Fourth answer</button><br> 
+                        <h5>Time remaining</h5>
+                        <div class="progress">
+                            <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <div id="answerScreen" class="text-center screenStyle" style="display:none;">
+                    <div class="container text-left">
+                        <p id="answerBanner">Your answer was</p>
+                        <p id="resultQuestion">Question was</p>
+                        <p id="result"> Your answer was </p>
+                        <p id="resultAnswer"> Correct answer is</p>
+                        <p id="next">Wait for next question</p>
+                    </div>
+                </div>
+                <div id="summaryScreen" class="screenStyle" style="display:none;">
+                    <h5>Summary information </h5>
+                    <h5>All games</h5>
+                    <p id="summaryGames">Games played</p>
+                    <p id="summaryGamesWon">Games won</p>
+                    <p id="summaryGamesLost">Games Lost</p>
+                    <br>
+                    <h5>Last game</h5>
+                    <p id="summaryQuestions">No of questions asked</p>
+                    <p id="summaryRight"> No of answers correct</p>
+                    <p id="summaryWrong">No of answers incorrect</p>
+                    <br>
+                    <button id="startAgainButton" class="startButtonClass btn btn-primary btn-lg m-2">Play again</button>
+                </div>
             </div>
-        </div>
-        <div id="answerScreen" class="text-center" style="display:none;">
-            <div class="container text-left">
-                <p id="answerBanner">Your answer was</p>
-                <p id="resultQuestion">Question was</p>
-                <p id="result"> Your answer was </p>
-                <p id="resultAnswer"> Correct answer is</p>
-                <p id="next">Wait for next question</p>
-            </div>
-        </div>
-        <div id="summaryScreen"  style="display:none;">
-            <h5>Summary information </h5>
-            <h5>All games</h5>
-            <p id="summaryGames">Games played</p>
-            <p id="summaryGamesWon">Games won</p>
-            <p id="summaryGamesLost">Games Lost</p>
-            <br>
-            <h5>Last game</h5>
-            <p id="summaryQuestions">No of questions asked</p>
-            <p id="summaryRight"> No of answers correct</p>
-            <p id="summaryWrong">No of answers incorrect</p>
-            <br>
-            <button id="startAgainButton" class="startButtonClass btn btn-primary btn-lg">Play again</button>
         </div>
     </div>
 
